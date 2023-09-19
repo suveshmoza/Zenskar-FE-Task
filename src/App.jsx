@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Editor from './Editor';
+import Editor from './components/Editor/Editor';
 import Header from './components/Header/Header';
 
 const App = () => {

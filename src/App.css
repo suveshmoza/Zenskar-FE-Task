@@ -9,3 +9,7 @@ body,
 html {
 	font-family: 'Figtree', sans-serif;
 }
+
+.App {
+	height: calc(100vh - 64px);
+}
