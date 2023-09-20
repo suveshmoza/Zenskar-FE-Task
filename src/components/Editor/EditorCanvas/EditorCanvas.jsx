@@ -1,3 +1,10 @@
+import {
+	DraggableButton,
+	DraggableDropdown,
+	DraggableTable,
+	DraggableTextInput,
+} from './DraggableComponets';
+
 import './index.css';
 
 const EditorCanvas = (props) => {
