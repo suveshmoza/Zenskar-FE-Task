@@ -5,7 +5,7 @@ import './Editor.css';
 
 const Editor = (props) => {
 	return (
-		<div className="editor">
+		<div className="flex h-full w-full">
 			<EditorCanvas />
 			<EditorPicker />
 		</div>

@@ -1,7 +1,7 @@
 import { AiFillCaretDown } from 'react-icons/ai';
 import { useState } from 'react';
 
-const InputWithSelect = () => {
+const InputWithSelect = ({ values }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const [isValid, setIsValid] = useState(true);
 	const [zoomSize, setZoomSize] = useState('100%');
@@ -13,7 +13,7 @@ const InputWithSelect = () => {
 			return;
 		}
 		setIsValid(true);
-		setZoomSize(e.target.value);
+		setZoomSize(e.target.value + '%');
 	}
 
 	return (
@@ -34,11 +34,11 @@ const InputWithSelect = () => {
 				className={`absolute z-10 rounded shadow-xl right-0 text-sm text-center bg-[#f9fbfc] border w-[70px] ${
 					isHovered ? '' : 'hidden'
 				}`}
-				onClick={(e) => handleChange.bind(null, e.target.value)}
+				onClick={handleChange}
 			>
-				{[25, 50, 75, 100].map((item) => (
-					<li key={item} className="hover:bg-[#effaff]" value="25">
-						{item}%
+				{values.map((value) => (
+					<li key={value} className="hover:bg-[#effaff]" value={value}>
+						{value}%
 					</li>
 				))}
 			</ul>
