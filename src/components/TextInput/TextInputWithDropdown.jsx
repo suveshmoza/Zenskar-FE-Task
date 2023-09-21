@@ -7,13 +7,29 @@ const TextInputWithDropdown = ({ values }) => {
 	const [zoomSize, setZoomSize] = useState('100%');
 
 	function handleChange(e) {
-		const val = parseInt(e.target.value);
-		if (val < 0 || val > 100) {
-			setIsValid(false);
+		const inputVal = e.target.value;
+
+		if (inputVal.length === 0) {
+			setIsValid(true);
+			setZoomSize('%');
+			e.target.setSelectionRange(0, 0);
 			return;
 		}
-		setIsValid(true);
-		setZoomSize(e.target.value + '%');
+
+		const parsedVal = parseFloat(inputVal);
+
+		if (isNaN(parsedVal)) {
+			setIsValid(false);
+			setZoomSize('');
+			return;
+		}
+
+		if (parsedVal < 0 || parsedVal > 100) {
+			setIsValid(false);
+		} else {
+			setIsValid(true);
+			setZoomSize(parsedVal + '%');
+		}
 	}
 
 	return (
