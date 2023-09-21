@@ -5,7 +5,7 @@ import './Editor.css';
 
 const Editor = () => {
 	return (
-		<div className="flex h-full w-full">
+		<div className="editor relative">
 			<EditorCanvas />
 			<EditorPicker />
 		</div>

@@ -1,7 +1,17 @@
+.editor {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100%);
+}
 .editor-canvas {
 	width: calc(100% - 250px);
 	background: #e9eff2 0% 0% no-repeat padding-box;
 	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
 .grid-overlay {
@@ -17,4 +27,17 @@
 		),
 		linear-gradient(to bottom, transparent 24px, rgba(0, 0, 0, 0.1) 25px);
 	background-size: 25px 25px;
+}
+
+@media (min-width: 768px) {
+	.editor {
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+	.editor-canvas {
+		width: calc(100% - 250px);
+		background: #e9eff2 0% 0% no-repeat padding-box;
+		position: relative;
+	}
 }
