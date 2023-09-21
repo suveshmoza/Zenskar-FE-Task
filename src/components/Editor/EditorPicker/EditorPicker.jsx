@@ -1,14 +1,13 @@
 import './index.css';
 
 import ComponentList from '../../ComponentList/ComponentList';
-import TextInputWithIcon from '../../TextInput/TextInputWithIcon';
+import SearchInput from '../../TextInput/SearchInput';
 import TextInputWithDropdown from '../../TextInput/TextInputWithDropdown';
 
 import { createNewElement } from '../../../util/element';
 
 import componentListData from '../../../data/componentList.js';
 
-import { BsSearch } from 'react-icons/bs';
 import { FaPlay } from 'react-icons/fa';
 
 const EditorPicker = () => {
@@ -22,8 +21,7 @@ const EditorPicker = () => {
 			</div>
 
 			{/* Search input with Icon */}
-			<TextInputWithIcon
-				Icon={BsSearch}
+			<SearchInput
 				placeholder="Search Components"
 				customStyle={{
 					marginTop: '40px',

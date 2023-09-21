@@ -3,7 +3,7 @@ import { HiMenu } from 'react-icons/hi';
 const Header = () => {
 	return (
 		<header className="h-[64px] flex justify-between">
-			<div className="flex justify-center items-center gap-1 p-8">
+			<div className="flex justify-center items-center gap-1 p-8 cursor-pointer">
 				<HiMenu className="text-2xl" />
 				<h4 className="font-bold text-sm">
 					Design Board
