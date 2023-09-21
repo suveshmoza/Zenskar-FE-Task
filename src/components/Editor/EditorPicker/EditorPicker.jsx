@@ -13,7 +13,7 @@ import { FaPlay } from 'react-icons/fa';
 
 const EditorPicker = () => {
 	return (
-		<div className="z-20">
+		<div className=" bg-[#f9fbfc] shadow-xl border-l">
 			<div className="hidden editor-picker md:flex md:flex-col justify-start items-stretch">
 				<div className="flex justify-center items-center">
 					<TextInputWithDropdown values={[25, 50, 75, 100]} />
