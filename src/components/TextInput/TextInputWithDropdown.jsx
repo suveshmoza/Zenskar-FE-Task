@@ -1,7 +1,7 @@
 import { AiFillCaretDown } from 'react-icons/ai';
 import { useState } from 'react';
 
-const InputWithSelect = ({ values }) => {
+const TextInputWithDropdown = ({ values }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const [isValid, setIsValid] = useState(true);
 	const [zoomSize, setZoomSize] = useState('100%');
@@ -46,4 +46,4 @@ const InputWithSelect = ({ values }) => {
 	);
 };
 
-export default InputWithSelect;
+export default TextInputWithDropdown;

@@ -1,4 +1,4 @@
-const IconInput = ({ Icon, customStyle, name, placeholder }) => {
+const TextInputWithIcon = ({ Icon, customStyle, name, placeholder }) => {
 	return (
 		<div style={customStyle}>
 			<label htmlFor="search" className="relative">
@@ -15,4 +15,4 @@ const IconInput = ({ Icon, customStyle, name, placeholder }) => {
 	);
 };
 
-export default IconInput;
+export default TextInputWithIcon;

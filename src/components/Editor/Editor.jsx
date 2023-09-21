@@ -3,9 +3,9 @@ import EditorPicker from './EditorPicker/EditorPicker';
 
 import './Editor.css';
 
-const Editor = (props) => {
+const Editor = () => {
 	return (
-		<div className="flex h-full w-full">
+		<div className="flex h-full">
 			<EditorCanvas />
 			<EditorPicker />
 		</div>
