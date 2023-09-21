@@ -31,7 +31,7 @@
 
 @media (min-width: 768px) {
 	.editor {
-		height: 100%;
+		height: 100vh;
 		display: flex;
 		flex-direction: row;
 	}
