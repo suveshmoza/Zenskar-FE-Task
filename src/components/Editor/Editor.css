@@ -1,9 +1,3 @@
-.editor {
-	width: 100%;
-	height: 100%;
-	display: flex;
-}
-
 .editor-canvas {
 	width: calc(100% - 250px);
 	background: #e9eff2 0% 0% no-repeat padding-box;

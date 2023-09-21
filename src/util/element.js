@@ -26,3 +26,9 @@ export const getStyles = (left, top, isDragging) => {
 		height: isDragging ? 0 : '',
 	};
 };
+
+export const snapToGrid = (x, y) => {
+	const snappedX = Math.round(x / 25) * 25;
+	const snappedY = Math.round(y / 25) * 25;
+	return [snappedX, snappedY];
+};

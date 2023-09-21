@@ -1,26 +1,25 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useDrop } from 'react-dnd';
 import { useDispatch, useSelector } from 'react-redux';
+
+import RenderElements from './RenderElements/RenderElements';
+import DeleteElements from './DeleteElements/DeleteElements';
+
 import {
 	setElement,
 	setElementPosition,
 } from '../../../store/slice/elementSlice.js';
-import { createNewElement } from '../../../util/element.js';
-import RenderElements from './RenderElements/RenderElements.jsx';
-import componentTypes from '../../../data/componentTypes.js';
-import DeleteElements from './DeleteElements/index.jsx';
 
-export const snapToGrid = (x, y) => {
-	const snappedX = Math.round(x / 25) * 25;
-	const snappedY = Math.round(y / 25) * 25;
-	return [snappedX, snappedY];
-};
+import { createNewElement, snapToGrid } from '../../../util/element.js';
+
+import componentTypes from '../../../data/componentTypes.js';
 
 const EditorCanvas = () => {
 	const { elements } = useSelector((state) => state.elements);
 	const [isHovering, setIsHovering] = useState(false);
 
 	const dispatch = useDispatch();
+
 	const moveBox = useCallback(
 		(id, left, top) => {
 			dispatch(
@@ -51,7 +50,6 @@ const EditorCanvas = () => {
 				canDrop: monitor.canDrop(),
 			};
 		},
-		// Catch drags within the canvas
 		drop: (item, monitor) => {
 			const delta = monitor.getDifferenceFromInitialOffset();
 			if (item.id && delta) {
@@ -63,6 +61,7 @@ const EditorCanvas = () => {
 			return undefined;
 		},
 	}));
+
 	return (
 		<>
 			<div className="editor-canvas" ref={drop}>

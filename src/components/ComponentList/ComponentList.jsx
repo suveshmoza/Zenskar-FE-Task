@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { setElement } from '../../store/slice/elementSlice';
+
 import ComponentItem from './ComponentItem';
 
 const ComponentList = ({ componentListData, createNewElement }) => {
@@ -20,7 +21,7 @@ const ComponentList = ({ componentListData, createNewElement }) => {
 						description={component.description}
 						onClick={() => onClickCreate(component.type)}
 					/>
-					<div className="border border-[#E9EFF2] w-[232px] bg-red-500 my-6"></div>
+					<div className="border border-[#E9EFF2] w-[232px] my-6"></div>
 				</div>
 			))}
 		</>

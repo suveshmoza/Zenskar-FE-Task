@@ -1,8 +1,9 @@
 import { useDrop } from 'react-dnd';
 import { useDispatch } from 'react-redux';
+import { FaTrash } from 'react-icons/fa';
+
 import { removeElement } from '../../../../store/slice/elementSlice.js';
 import componentTypes from '../../../../data/componentTypes.js';
-import { FaTrash } from 'react-icons/fa';
 
 const DeleteElements = () => {
 	const dispatch = useDispatch();

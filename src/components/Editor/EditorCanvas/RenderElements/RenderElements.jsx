@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 
 import Button from '../../../Button/Button';
@@ -41,7 +40,7 @@ const RenderElements = ({ canDrop }) => {
 		return (
 			<div className="flex justify-center items-center h-full w-full -z-10">
 				<h1 className="text-[32px] font-extrabold text-[#1A1A1A] opacity-10">
-					{canDrop ? 'Release to drop' : 'Drag & drop components here.'}
+					{!canDrop && 'Drag & drop components here.'}
 				</h1>
 			</div>
 		);
