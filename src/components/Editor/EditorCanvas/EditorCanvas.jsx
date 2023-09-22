@@ -64,7 +64,7 @@ const EditorCanvas = () => {
 
 	return (
 		<>
-			<div className="editor-canvas" ref={drop}>
+			<div className="editor-canvas overflow-scroll" ref={drop}>
 				{isHovering && <DeleteElements />}
 				<RenderElements canDrop={canDrop} />
 				{isOver && <div className="grid-overlay"></div>}
